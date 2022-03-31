@@ -29,7 +29,7 @@ First, I trained the YOLOv3 model for ship detection using the darknet framework
 
 Follow the steps below to reproduce it.
 
-<img src="https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/kv260.png" style="zoom: 15%;" />
+<img src="https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/kv260.jpg" style="zoom: 15%;" />
 
 ### 1. Prepare KV260 and PYNQ
 
