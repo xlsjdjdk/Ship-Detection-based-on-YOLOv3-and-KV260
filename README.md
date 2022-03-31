@@ -29,7 +29,7 @@ First, I trained the YOLOv3 model for ship detection using the darknet framework
 
 Follow the steps below to reproduce it.
 
-<img src="C:\Users\lyk\AppData\Roaming\Typora\typora-user-images\image-20220331222609540.png" alt="image-20220331222609540" style="zoom: 15%;" />
+<img src="https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/kv260.png" style="zoom: 15%;" />
 
 ### 1. Prepare KV260 and PYNQ
 
@@ -61,13 +61,13 @@ Clone this Repository on Kria-PYNQ directory and run `yolov3_dpu/dpu_yolov3_voc.
 
 Image test:
 
-![output_22_1](D:\lyk\Downloads\dpu_yolov3_voc\output_22_1.png)
+![output_22_1](https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/output.png)
 
 ## Train & Deploy YOLOv3 on KV260 with PYNQ
 
 Clone [AlexeyAB Darknet](https://github.com/AlexeyAB/darknet), and train your own YOLOv3 model.
 
-<img src="C:\Users\lyk\AppData\Roaming\Typora\typora-user-images\image-20220331215455126.png" alt="image-20220331215455126" style="zoom: 67%;" />
+<img src="https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/train.png" style="zoom: 67%;" />
 
 For ship detection, my model have 93.1% mAP  with 0.5 IoU thresh.
 
@@ -78,19 +78,19 @@ conda activate vitis-ai-caffe
 bash scripts/darknet_convert.sh # convert darknet model to caffe model
 ```
 
-![image-20220331221545009](C:\Users\lyk\AppData\Roaming\Typora\typora-user-images\image-20220331221545009.png)
+![image-20220331221545009](https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/convert.png)
 
 ```bash
 bash scripts/run_vai_q.sh # quantize model
 ```
 
-<img src="C:\Users\lyk\AppData\Roaming\Typora\typora-user-images\image-20220331222002206.png" alt="image-20220331222002206" style="zoom:67%;" />
+<img src="https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/quantize.png" style="zoom:67%;" />
 
 ```bash
 bash run_vai_c_kv260.sh # compile caffe model to xmodel
 ```
 
-<img src="C:\Users\lyk\AppData\Roaming\Typora\typora-user-images\image-20220331222155197.png" alt="image-20220331222155197" style="zoom:67%;" />
+<img src="https://github.com/xlsjdjdk/Ship-Detection-based-on-YOLOv3-and-KV260/blob/master/img/compile.png" style="zoom:67%;" />
 
 
 
